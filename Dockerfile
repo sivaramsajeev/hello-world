@@ -1,7 +1,11 @@
-FROM python:3-alpine
-WORKDIR /usr/src/app
-EXPOSE 8000
+FROM alpine
+
 COPY requirements.txt .
-RUN pip install -qr requirements.txt
+RUN apk add --no-cache bash git nginx uwsgi uwsgi-python py2-pip \
+ && pip2 install --upgrade pip \
+ && pip2 install flask
+
 COPY server.py .
-CMD ["python3", "./server.py"]
+EXPOSE 8000
+CMD ["python", "./server.py"]
+
