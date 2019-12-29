@@ -2,7 +2,7 @@ from flask import Flask
 
 PORT = 8000
 MESSAGE = '''<h1>Hello, world! from Python Flask</h1>
-             <h2> Python code tends to be simpler </h2>
+             <h2> Python code tends to be simpler </h2>'''
 
 app = Flask(__name__)
 
