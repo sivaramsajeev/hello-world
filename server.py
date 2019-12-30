@@ -1,8 +1,12 @@
 from flask import Flask
+import socket   
+
+hostname = socket.gethostname()    
+IPAddr = socket.gethostbyname(hostname)
 
 PORT = 8000
-MESSAGE = '''<h1>Hello, world! from Python Flask</h1>
-             <h2> Python code tends to be simpler </h2>'''
+MESSAGE = '''<h1>Hello, world! from {} @ IP {} </h1>
+             <h2> Python code tends to be simpler </h2>'''.format(hostname,IPAddr)
 
 app = Flask(__name__)
 
