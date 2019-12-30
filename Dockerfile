@@ -6,7 +6,7 @@ RUN apk add --no-cache bash git nginx uwsgi uwsgi-python py2-pip \
  && pip2 install flask
 
 COPY server.py .
-COPY CariBeach.jpg .
+COPY CariBeach.JPG .
 EXPOSE 8000
 CMD ["python", "./server.py"]
 
