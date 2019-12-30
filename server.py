@@ -8,7 +8,12 @@ PORT = 8000
 MESSAGE = '''<body style="background-color:powderblue;">
              <h1 style="color:blue;">Hello, world! from {} @ IP {} </h1>
              <h2 style="color:green;"> Python code tends to be simpler </h2>
-             </body>'''.format(hostname,IPAddr)
+             </body>
+             <style>
+             body {
+             background-image: url('CariBeach.jpg');
+             }
+             </style>'''.format(hostname,IPAddr)
 
 app = Flask(__name__)
 
