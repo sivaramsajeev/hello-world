@@ -5,7 +5,7 @@ hostname = socket.gethostname()
 IPAddr = socket.gethostbyname(hostname)
 
 PORT = 8000
-MESSAGE = '''<body style="background-color:powderblue;">
+MESSAGE = '''<body>
              <h1 style="color:blue;">Hello, world! from {} @ IP {} </h1>
              <h2 style="color:green;"> Python code tends to be simpler </h2>
              </body>
